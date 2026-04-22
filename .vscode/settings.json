@@ -214,5 +214,8 @@
 		".github/skills/.local": true,
 		".agents/skills/.local": true,
 		".claude/skills/.local": true,
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
 	}
 }

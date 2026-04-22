@@ -1,0 +1,12 @@
+{
+	"displayName": "Knowledge Library",
+	"description": "Obsidian-style wiki management for VS Code with GitHub Copilot as wiki maintainer.",
+	"cmd.category": "Knowledge Library",
+	"cmd.searchWiki": "Search Wiki",
+	"cmd.showGraph": "Show Graph",
+	"cmd.showLocalGraph": "Show Local Graph",
+	"view.backlinks": "Backlinks",
+	"config.title": "Knowledge Library",
+	"config.wikiDir": "Directory (relative to workspace root) where wiki pages are stored.",
+	"config.rawDir": "Directory (relative to workspace root) where raw source documents are stored."
+}
