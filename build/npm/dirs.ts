@@ -42,6 +42,7 @@ export const dirs = [
 	'extensions/microsoft-authentication',
 	'extensions/notebook-renderers',
 	'extensions/npm',
+	'extensions/knowledge-library',
 	'extensions/php-language-features',
 	'extensions/references-view',
 	'extensions/search-result',

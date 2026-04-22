@@ -1,0 +1,86 @@
+{
+  "name": "knowledge-library",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.1.0",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "activationEvents": [
+    "workspaceContains:AGENTS.md",
+    "workspaceContains:**/wiki/*.md"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "knowledge-library.searchWiki",
+        "title": "%cmd.searchWiki%",
+        "category": "%cmd.category%"
+      },
+      {
+        "command": "knowledge-library.showGraph",
+        "title": "%cmd.showGraph%",
+        "category": "%cmd.category%"
+      },
+      {
+        "command": "knowledge-library.showLocalGraph",
+        "title": "%cmd.showLocalGraph%",
+        "category": "%cmd.category%"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "knowledge-library.backlinksView",
+          "name": "%view.backlinks%",
+          "icon": "media/backlinks.svg",
+          "when": "knowledgeLibrary.active"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "knowledge-library.searchWiki",
+        "key": "ctrl+shift+k",
+        "when": "editorTextFocus && resourceExtname == .md"
+      }
+    ],
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "knowledgeLibrary.wikiDir": {
+          "type": "string",
+          "default": "wiki",
+          "description": "%config.wikiDir%"
+        },
+        "knowledgeLibrary.rawDir": {
+          "type": "string",
+          "default": "raw",
+          "description": "%config.rawDir%"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "22.x"
+  },
+  "scripts": {
+    "compile": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/vscode.git"
+  }
+}
